@@ -10,4 +10,6 @@ jobs:
 
     steps:
       - name: Update repository
-        run: echo ${{ github.event.client_payload.release_version }} >> coincoin.txt
+        run: |-
+          echo ${{ github.event.client_payload.release_version }}
+          echo ${{ github.event.client_payload.release_version }} >> coincoin.txt
